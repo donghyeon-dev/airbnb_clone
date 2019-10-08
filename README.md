@@ -1,3 +1,5 @@
 # Airbnb Clone
 
-Cloning Airbnb with Python, Django, Tailwind and more...
+Cloning Airbnb 
+Backend-clone : Python, Django, AWS, Heroku
+Frontend-clone : HTML, CSS, Vanilla JS, Tailwind CSS, GULP
