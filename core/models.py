@@ -1,2 +1,15 @@
 from django.db import models
 
+
+class TimeStampedModel(models.Model):
+
+    """Time Stamped Model"""
+
+    """ 이 클래스는 User를 제외한 다른 어플리케이션에서 사용할예정임 """
+
+    created = models.DateTimeField()
+    updated = models.DateTimeField()
+
+    class Meta:
+        abstract = True
+        """  L11===DB로 가는 모델이 아니라 그냥 우리가 사용하는 모델이라는 뜻 """
