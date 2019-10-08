@@ -36,3 +36,7 @@ class User(AbstractUser):
     """ DateFiled 는 null true 해야함 """
     """ DB상에서 black와 null은 차이가 있음 => null=True일 경우에는 유저등록시 required로 나오기 때문에 blank사용 """
     """ model에서 새로운 모델을 작업한 후 makemigration > migrate  """
+
+
+"""  using null on string-based fields such as CharField and TextField. """
+"The first element in each tuple is the actual value to be set on the model, and the second element is the human-readable name. "
