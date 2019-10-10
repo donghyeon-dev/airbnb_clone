@@ -31,8 +31,8 @@ class User(AbstractUser):
     birthdate = models.DateField(blank=True, null=True)
     language = models.CharField(choices=LANGUAGE_CHOICE, max_length=2, blank=True)
     currency = models.CharField(choices=CURRENCY_CHOICE, max_length=3, blank=True)
-
     superhost = models.BooleanField(default=False)
+
     """ DateFiled 는 null true 해야함 """
     """ DB상에서 black와 null은 차이가 있음 => null=True일 경우에는 유저등록시 required로 나오기 때문에 blank사용 """
     """ model에서 새로운 모델을 작업한 후 makemigration > migrate  """
