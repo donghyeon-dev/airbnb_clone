@@ -7,8 +7,10 @@ class TimeStampedModel(models.Model):
 
     """ 이 클래스는 User를 제외한 다른 어플리케이션에서 사용할예정임 """
 
-    created = models.DateTimeField()
-    updated = models.DateTimeField()
+    created = models.DateTimeField(
+        auto_now_add=True
+    )  # get the time when model is created
+    updated = models.DateTimeField(auto_now=True)  # get the time when updated
 
     class Meta:
         abstract = True
