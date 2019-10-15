@@ -78,6 +78,7 @@ class Room(core_models.TimeStampedModel):
     instant_book = models.BooleanField(default=False)
     host = models.ForeignKey("users.User", on_delete=models.CASCADE)
     # user를 삭제할때 room 또한 같이 지워진다는 의미 , room을 지키고 싶으면 on_delete = models.PROTECT
+
     room_type = models.ForeignKey("RoomType", on_delete=models.SET_NULL, null=True)
     # 지워지면 안되니까?
     amenities = models.ManyToManyField("Amenity", blank=True)
