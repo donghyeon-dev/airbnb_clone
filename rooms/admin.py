@@ -45,7 +45,9 @@ class RoomAdmin(admin.ModelAdmin):
         "check_in",
         "check_out",
         "instant_book",
+        "count_amenities",
     )
+    # ordering = ("name", "price", "bedrooms")
     list_filter = ("instant_book", "city", "country")
 
     list_filter = (
@@ -63,6 +65,11 @@ class RoomAdmin(admin.ModelAdmin):
 
     filter_horizontal = ("amenities", "facilities", "house_rules")
     # ManytoMany Filed 에서만 작동함 => Roomtype은 ForiegnKey!
+
+    def count_amenities(self, obj):
+        return obj.amenities.count()
+
+    count_amenities.short_description = "Amenity Count"
 
 
 @admin.register(models.Photo)
